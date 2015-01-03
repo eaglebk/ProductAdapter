@@ -5,6 +5,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.BaseAdapter;
+
+import com.eagle.com.gridviewcustom.component.CustomButton;
 import com.eagle.com.gridviewcustom.dto.Product;
 
 import java.util.List;
@@ -39,10 +41,10 @@ public class ProductAdapter extends BaseAdapter {
         Button button;
 
         if (convertView == null){
-            button = new Button(context);
+            button = new CustomButton(context);
             button.setText(products.get(position).getName());
         } else {
-            button = (Button)convertView;
+            button = (CustomButton)convertView;
         }
         button.setId(position);
 
